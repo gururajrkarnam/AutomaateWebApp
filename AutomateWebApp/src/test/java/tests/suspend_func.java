@@ -79,7 +79,7 @@ public class suspend_func extends Base {
 		}
 			catch (NoSuchElementException e) {
 		//	throw new RuntimeException("there is no such record found");
-				System.out.println("Exception! - No such record found, Exception: " + e.toString()); //prints the exception
+				System.out.println("Exception! - No such records found, Exception: " + e.toString()); //prints the exception
 			    throw e;
 			}    
 	
