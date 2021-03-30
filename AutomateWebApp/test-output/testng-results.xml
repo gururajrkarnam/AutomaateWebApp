@@ -1,32 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-02-20T03:55:21 GMT-11:00" name="Default suite" finished-at="2021-02-20T03:55:39 GMT-11:00" duration-ms="18020">
+  <suite started-at="2021-02-26T06:33:03 GMT-11:00" name="Suite" finished-at="2021-02-26T06:34:11 GMT-11:00" duration-ms="67690">
     <groups>
     </groups>
-    <test started-at="2021-02-20T03:55:21 GMT-11:00" name="Default test" finished-at="2021-02-20T03:55:39 GMT-11:00" duration-ms="18020">
-      <class name="DDT">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:DDT@61386958]" started-at="2021-02-20T03:55:21 GMT-11:00" name="beforeTest" finished-at="2021-02-20T03:55:36 GMT-11:00" duration-ms="14912" status="PASS">
+    <test started-at="2021-02-26T06:33:03 GMT-11:00" name="Test" finished-at="2021-02-26T06:34:11 GMT-11:00" duration-ms="67690">
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="openApplication()[pri:0, instance:tests.LoginTest@550ee7e5]" started-at="2021-02-26T06:34:01 GMT-11:00" name="openApplication" finished-at="2021-02-26T06:34:06 GMT-11:00" duration-ms="5139" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method signature="testFullPage()[pri:0, instance:DDT@61386958]" started-at="2021-02-20T03:55:36 GMT-11:00" name="testFullPage" finished-at="2021-02-20T03:55:37 GMT-11:00" duration-ms="1114" status="FAIL">
-          <exception class="java.lang.ExceptionInInitializerError">
+        </test-method> <!-- openApplication -->
+        <test-method signature="login()[pri:0, instance:tests.LoginTest@550ee7e5]" started-at="2021-02-26T06:34:06 GMT-11:00" name="login" finished-at="2021-02-26T06:34:10 GMT-11:00" duration-ms="4566" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="closure()[pri:0, instance:tests.LoginTest@550ee7e5]" started-at="2021-02-26T06:34:10 GMT-11:00" name="closure" finished-at="2021-02-26T06:34:11 GMT-11:00" duration-ms="239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closure -->
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.login_with_dd">
+        <test-method is-config="true" signature="openApplication()[pri:0, instance:tests.login_with_dd@15bbf42f]" started-at="2021-02-26T06:33:21 GMT-11:00" name="openApplication" finished-at="2021-02-26T06:33:27 GMT-11:00" duration-ms="5673" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method signature="login(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.login_with_dd@15bbf42f]" started-at="2021-02-26T06:33:27 GMT-11:00" name="login" data-provider="getLoginData" finished-at="2021-02-26T06:33:41 GMT-11:00" duration-ms="14127" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abc]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Success]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Success] but found [Failure]]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.ExceptionInInitializerError
-at org.apache.poi.ss.util.CellReference.<init>(CellReference.java:110)
-at org.apache.poi.xssf.usermodel.XSSFCell.<init>(XSSFCell.java:119)
-at org.apache.poi.xssf.usermodel.XSSFRow.<init>(XSSFRow.java:77)
-at org.apache.poi.xssf.usermodel.XSSFSheet.initRows(XSSFSheet.java:268)
-at org.apache.poi.xssf.usermodel.XSSFSheet.read(XSSFSheet.java:231)
-at org.apache.poi.xssf.usermodel.XSSFSheet.onDocumentRead(XSSFSheet.java:218)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.parseSheet(XSSFWorkbook.java:454)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.onDocumentRead(XSSFWorkbook.java:419)
-at org.apache.poi.ooxml.POIXMLDocument.load(POIXMLDocument.java:184)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:288)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:309)
-at DDT.testFullPage(DDT.java:39)
+              <![CDATA[java.lang.AssertionError: expected [Success] but found [Failure]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at tests.login_with_dd.login(login_with_dd.java:57)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -55,21 +84,56 @@ at org.testng.TestNG.run(TestNG.java:1037)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.nio.charset.UnsupportedCharsetException: Big5
-at java.base/java.nio.charset.Charset.forName(Unknown Source)
-at org.apache.poi.util.StringUtil.<clinit>(StringUtil.java:39)
-... 40 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.ExceptionInInitializerError -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testFullPage -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:DDT@61386958]" started-at="2021-02-20T03:55:37 GMT-11:00" name="afterTest" finished-at="2021-02-20T03:55:39 GMT-11:00" duration-ms="1913" status="PASS">
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="closure()[pri:0, instance:tests.login_with_dd@15bbf42f]" started-at="2021-02-26T06:33:41 GMT-11:00" name="closure" finished-at="2021-02-26T06:33:41 GMT-11:00" duration-ms="219" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- DDT -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- closure -->
+        <test-method is-config="true" signature="openApplication()[pri:0, instance:tests.login_with_dd@15bbf42f]" started-at="2021-02-26T06:33:41 GMT-11:00" name="openApplication" finished-at="2021-02-26T06:33:46 GMT-11:00" duration-ms="5322" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method signature="login(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.login_with_dd@15bbf42f]" started-at="2021-02-26T06:33:46 GMT-11:00" name="login" data-provider="getLoginData" finished-at="2021-02-26T06:34:00 GMT-11:00" duration-ms="13987" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dummy@test.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Failure]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="closure()[pri:0, instance:tests.login_with_dd@15bbf42f]" started-at="2021-02-26T06:34:00 GMT-11:00" name="closure" finished-at="2021-02-26T06:34:01 GMT-11:00" duration-ms="231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closure -->
+      </class> <!-- tests.login_with_dd -->
+      <class name="tests.suspend_func">
+        <test-method is-config="true" signature="openApplication()[pri:0, instance:tests.suspend_func@2dde1bff]" started-at="2021-02-26T06:33:03 GMT-11:00" name="openApplication" finished-at="2021-02-26T06:33:15 GMT-11:00" duration-ms="11589" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method signature="suspend()[pri:0, instance:tests.suspend_func@2dde1bff]" started-at="2021-02-26T06:33:15 GMT-11:00" name="suspend" finished-at="2021-02-26T06:33:21 GMT-11:00" duration-ms="6479" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- suspend -->
+      </class> <!-- tests.suspend_func -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
